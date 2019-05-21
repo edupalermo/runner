@@ -1,7 +1,29 @@
+<!DOCTYPE html>
 <html>
 
-<body>
-Test
+<head>
+  <meta charset="UTF-8">
+  <title>Just a test page</title>
+  <script type="text/javascript" src="js/runner.js"></script>
+
+  <script>
+    function bodyOnLoadEvent() {
+      console.log("Executed on load!");
+    }
+
+    function bodyOnKeyPress(name, event) {
+      console.log("Event " + name);
+      console.log(event);
+    }
+  </script>
+
+</head>
+
+<body onload="bodyOnLoadEvent()" onkeypress="bodyOnKeyPress('onkeypress', event)" onkeydown="bodyOnKeyPress('onkeydown', event)" onkeyup="bodyOnKeyPress('onkeyup', event)">
+
+<canvas id="mainCanvas">
+</canvas>
+
 
 </body>
 
